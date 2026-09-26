@@ -3,937 +3,248 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta name="description" content="GRASCO - Grassroots Resource and Skills for Community Opportunities">
 <title>GRASCO | Stronger Together, Better Communities</title>
 
 <style>
-*{
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
-    margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    color:#17324d;
-    line-height:1.6;
-    background:#ffffff;
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#17324d;
+  line-height:1.65;
+  background:#fff;
 }
-
 header{
-    padding:12px 5%;
-    border-bottom:1px solid #ddd;
-    background:white;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    position:sticky;
-    top:0;
-    z-index:1000;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#fff;
+  border-bottom:1px solid #dfe5e8;
+  padding:10px 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
 header img{
-    width:190px;
-    height:auto;
-    max-width:100%;
-    display:block;
+  width:190px;
+  max-height:75px;
+  object-fit:contain;
+  display:block;
 }
 
-nav{
-    display:flex;
-    gap:5px;
-    align-items:center;
-    overflow-x:auto;
-    white-space:nowrap;
-    -webkit-overflow-scrolling:touch;
-}
 
-nav a{
-    text-decoration:none;
-    color:#0b587c;
-    font-weight:bold;
-    padding:9px 11px;
-    border-radius:6px;
-}
-
-nav a:hover{
-    background:#f2f7f8;
-}
-
-.menu-button{
-    display:none;
-    border:0;
-    background:#0b587c;
-    color:white;
-    font-size:25px;
-    padding:7px 12px;
-    border-radius:6px;
-    cursor:pointer;
-}
 
 .hero{
-    padding:90px 6%;
-    text-align:center;
-    color:white;
-    background:linear-gradient(135deg,#0b6fa4,#08735f);
+  padding:92px 6%;
+  text-align:center;
+  color:#fff;
+  background:linear-gradient(135deg,#0b6fa4,#08735f);
 }
-
 .hero h1{
-    font-size:clamp(38px,7vw,62px);
-    line-height:1.1;
-    margin:0 0 20px;
+  font-size:clamp(38px,7vw,68px);
+  line-height:1.08;
+  margin:0 0 18px;
 }
-
+.hero h2{
+  font-size:clamp(22px,4vw,34px);
+  margin:0 0 15px;
+  color:#fff;
+}
 .hero p{
-    font-size:22px;
-    max-width:850px;
-    margin:0 auto 25px;
+  font-size:21px;
+  max-width:850px;
+  margin:0 auto 25px;
 }
-
 .btn{
-    display:inline-block;
-    padding:12px 20px;
-    margin:6px;
-    border-radius:7px;
-    background:white;
-    color:#08735f;
-    text-decoration:none;
-    font-weight:bold;
+  display:inline-block;
+  padding:12px 21px;
+  margin:6px;
+  border-radius:8px;
+  background:#fff;
+  color:#08735f;
+  text-decoration:none;
+  font-weight:bold;
 }
-
-.btn.orange{
-    background:#f39a27;
-    color:white;
-}
+.btn.orange{background:#f39a27;color:#fff}
+.btn.blue{background:#0b587c;color:#fff}
 
 section{
-    max-width:1100px;
-    margin:auto;
-    padding:65px 6%;
+  max-width:1120px;
+  margin:auto;
+  padding:68px 6%;
 }
-
 section h2{
-    color:#0b587c;
-    font-size:34px;
-    margin-top:0;
+  color:#0b587c;
+  font-size:35px;
+  margin:0 0 15px;
 }
-
 .section-intro{
-    font-size:18px;
-    max-width:900px;
+  font-size:18px;
+  max-width:900px;
+}
+.alt{
+  background:#f2f7f8;
+  max-width:none;
+}
+.alt>div{max-width:1120px;margin:auto}
+
+.about-grid,
+.cards,
+.pillar-grid,
+.network-grid,
+.structure-grid,
+.team-grid,
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+  margin-top:28px;
 }
 
-.about-intro{
-    font-size:19px;
+.about-card,
+.card,
+.pillar,
+.network-card,
+.structure-card,
+.team-card,
+.contact-card{
+  padding:23px;
+  border:1px solid #dce3e6;
+  border-radius:13px;
+  background:#f8fbfc;
+}
+.about-card h3,
+.card h3,
+.pillar h3,
+.network-card h3,
+.structure-card h3,
+.team-card h3,
+.contact-card h3{
+  color:#08735f;
+  margin-top:0;
+}
+.about-card p,.card p,.pillar p,.network-card p,
+.structure-card p,.team-card p,.contact-card p{margin-bottom:0}
+
+.service-icon{
+  width:48px;
+  height:48px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#0b587c;
+  color:#fff;
+  font-weight:bold;
+  font-size:20px;
+  margin-bottom:12px;
 }
 
-.about-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-    margin-top:30px;
+.pillar span{
+  display:inline-block;
+  background:#0b587c;
+  color:#fff;
+  border-radius:50%;
+  width:36px;
+  height:36px;
+  text-align:center;
+  line-height:36px;
+  margin-bottom:10px;
+  font-weight:bold;
 }
 
-.about-card{
-    padding:22px;
-    border:1px solid #ddd;
-    border-radius:10px;
-    background:#f7fafb;
+.network-banner{
+  background:#0b587c;
+  color:#fff;
+  max-width:none;
+  text-align:center;
+}
+.network-banner h2{color:#fff}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:15px;
+  margin-top:28px;
+}
+.stat{
+  padding:20px;
+  background:#fff;
+  color:#0b587c;
+  border-radius:10px;
+  text-align:center;
+}
+.stat strong{
+  display:block;
+  font-size:30px;
+  color:#08735f;
 }
 
-.about-card h3{
-    color:#08735f;
-    margin-top:0;
+.structure-flow{
+  margin-top:25px;
+  padding:25px;
+  background:#f7fafb;
+  border-radius:12px;
+  border:1px solid #ddd;
+}
+.structure-flow p{margin:9px 0}
+
+.team-intro{
+  background:#eef7f5;
+  border-left:5px solid #08735f;
+  padding:18px 20px;
+  border-radius:8px;
+  margin-top:22px;
 }
 
-.about-list{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    margin-top:25px;
+.team-photo{
+  width:100%;
+  height:210px;
+  object-fit:cover;
+  border-radius:10px;
+  background:#dfe9ed;
+  display:block;
 }
-
-.about-item{
-    padding:20px;
-    border-left:5px solid #08735f;
-    background:#f7fafb;
+.photo-placeholder{
+  height:210px;
+  border-radius:10px;
+  background:linear-gradient(135deg,#dfe9ed,#eef4f6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#547080;
+  font-weight:bold;
+  letter-spacing:.5px;
 }
-
-.about-item h3{
-    margin-top:0;
-    color:#0b587c;
+.team-role{
+  font-size:14px;
+  font-weight:bold;
+  color:#0b587c;
+  margin:5px 0 10px;
 }
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-}
-
-.card{
-    padding:22px;
-    border:1px solid #ddd;
-    border-radius:10px;
-    background:#f7fafb;
-}
-
-.card h3{
-    color:#08735f;
-    margin-top:0;
-}
-
-.network{
-    background:#f2f7f8;
-    max-width:none;
-}
-
-.network-inner{
-    max-width:1100px;
-    margin:auto;
-    padding:0 6%;
-}
-
-.pillars{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-    gap:15px;
-}
-
-.pillar{
-    padding:18px;
-    background:#f7fafb;
-    border:1px solid #ddd;
-    border-radius:9px;
-}
-
-.pillar strong{
-    color:#08735f;
-}
-
-.structure{
-    background:#ffffff;
-}
-
-.structure-box{
-    padding:25px;
-    margin-bottom:15px;
-    border-left:5px solid #0b587c;
-    background:#f7fafb;
-    border-radius:6px;
-}
-
-.structure-box h3{
-    margin-top:0;
-    color:#08735f;
+.team-note{
+  font-size:14px;
+  color:#526873;
 }
 
 .verify{
-    background:#0b587c;
-    color:white;
-    text-align:center;
-    max-width:none;
+  background:#0b587c;
+  color:#fff;
+  max-width:none;
+  text-align:center;
 }
-
-.verify h2{
-    color:white;
-}
-
-.verify p{
-    max-width:750px;
-    margin:0 auto 20px;
-}
-
-.contact{
-    background:#f7fafb;
-}
-
-.contact-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.contact-card{
-    background:white;
-    border:1px solid #ddd;
-    border-radius:10px;
-    padding:22px;
-}
-
-.contact-card h3{
-    color:#08735f;
-    margin-top:0;
-}
+.verify h2{color:#fff}
 
 .contact-card a{
-    color:#0b587c;
-    text-decoration:none;
-    font-weight:bold;
+  color:#0b587c;
+  font-weight:bold;
+  text-decoration:none;
 }
 
 footer{
-    padding:35px 6%;
-    text-align:center;
-    background:#122b3d;
-    color:white;
-}
-
-footer strong{
-    font-size:20px;
-}
-
-.back-top{
-    display:inline-block;
-    margin-top:15px;
-    color:white;
-    text-decoration:none;
-}
-
-/* MOBILE MENU */
-@media(max-width:800px){
-
-    header{
-        padding:10px 5%;
-    }
-
-    header img{
-        width:155px;
-    }
-
-    .menu-button{
-        display:block;
-    }
-
-    nav{
-        display:none;
-        position:absolute;
-        left:0;
-        right:0;
-        top:100%;
-        background:white;
-        border-top:1px solid #ddd;
-        box-shadow:0 5px 15px rgba(0,0,0,.12);
-        padding:10px;
-        flex-direction:column;
-        align-items:stretch;
-        overflow:visible;
-    }
-
-    nav.active{
-        display:flex;
-    }
-
-    nav a{
-        display:block;
-        padding:13px 15px;
-        border-bottom:1px solid #eee;
-    }
-
-    .hero{
-        padding:65px 6%;
-    }
-
-    .hero p{
-        font-size:18px;
-    }
-
-    section{
-        padding:50px 6%;
-    }
-
-    section h2{
-        font-size:29px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<!-- HEADER -->
-<header>
-
-    <a href="#home">
-        <img src="grasco-logo.jpg" alt="GRASCO Logo">
-    </a>
-
-    <button class="menu-button"
-            aria-label="Open menu"
-            aria-expanded="false"
-            onclick="toggleMenu()">
-        ☰
-    </button>
-
-    <nav id="mainNav">
-
-        <a href="#home" onclick="closeMenu()">Home</a>
-
-        <a href="#introduction" onclick="closeMenu()">Introduction</a>
-
-        <a href="#services" onclick="closeMenu()">Services</a>
-
-        <a href="#gds" onclick="closeMenu()">GRASCO-GDS</a>
-
-        <a href="#network" onclick="closeMenu()">Our Network</a>
-
-        <a href="#structure" onclick="closeMenu()">Structure</a>
-
-        <a href="#verification" onclick="closeMenu()">Verification</a>
-
-        <a href="#contact" onclick="closeMenu()">Contact</a>
-
-    </nav>
-
-</header>
-
-
-<!-- HOME -->
-<section id="home" class="hero">
-
-    <h1>
-        Stronger Together.<br>
-        Better Communities.
-    </h1>
-
-    <p>
-        Grassroots Resource and Skills for Community Opportunities
-    </p>
-
-    <p>
-        Strengthening community self-help groups through leadership,
-        governance, practical skills, enterprise development and
-        sustainable community opportunities.
-    </p>
-
-    <a class="btn" href="#introduction">
-        Learn About GRASCO
-    </a>
-
-    <a class="btn orange" href="#verification">
-        Verify Membership
-    </a>
-
-</section>
-
-
-<!-- INTRODUCTION -->
-<section id="introduction">
-
-    <h2>Introduction to GRASCO</h2>
-
-    <p class="about-intro">
-        GRASCO — Grassroots Resource and Skills for Community Opportunities —
-        is a community-focused organization established to strengthen
-        grassroots institutions and community self-help groups.
-    </p>
-
-    <p>
-        GRASCO focuses on practical capacity building, leadership and
-        governance development, financial discipline, mentoring, market
-        linkages, networking and sustainable community enterprise
-        development.
-    </p>
-
-    <p>
-        Our approach is to strengthen what communities already have,
-        support existing initiatives and help organized communities
-        improve their ability to manage resources, develop enterprises,
-        access markets and create sustainable opportunities.
-    </p>
-
-    <div class="about-grid">
-
-        <div class="about-card">
-            <h3>Our Vision</h3>
-            <p>
-                Strong, organized and self-sustaining communities with
-                empowered grassroots institutions.
-            </p>
-        </div>
-
-        <div class="about-card">
-            <h3>Our Mission</h3>
-            <p>
-                To strengthen community self-help groups and grassroots
-                leadership through capacity building, governance,
-                financial discipline, mentorship, market linkages and
-                sustainable development support.
-            </p>
-        </div>
-
-        <div class="about-card">
-            <h3>Our Approach</h3>
-            <p>
-                Practical, participatory, needs-based and focused on
-                strengthening existing community initiatives.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- CORE AREAS -->
-<section>
-
-    <h2>What GRASCO Focuses On</h2>
-
-    <div class="about-list">
-
-        <div class="about-item">
-            <h3>Community Organization</h3>
-            <p>
-                Supporting organized communities and self-help groups
-                to strengthen their internal systems.
-            </p>
-        </div>
-
-        <div class="about-item">
-            <h3>Leadership</h3>
-            <p>
-                Building responsible, accountable and effective
-                grassroots leadership.
-            </p>
-        </div>
-
-        <div class="about-item">
-            <h3>Financial Discipline</h3>
-            <p>
-                Promoting responsible financial management,
-                accountability and proper records.
-            </p>
-        </div>
-
-        <div class="about-item">
-            <h3>Enterprise Development</h3>
-            <p>
-                Helping communities strengthen existing businesses,
-                projects and income-generating activities.
-            </p>
-        </div>
-
-        <div class="about-item">
-            <h3>Market Linkages</h3>
-            <p>
-                Connecting community enterprises with markets,
-                institutions and potential partners.
-            </p>
-        </div>
-
-        <div class="about-item">
-            <h3>Sustainability</h3>
-            <p>
-                Supporting communities to build systems and projects
-                capable of continuing beyond individual interventions.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- SERVICES -->
-<section id="services">
-
-    <h2>Our Services</h2>
-
-    <p class="section-intro">
-        GRASCO provides practical services designed to strengthen
-        community groups, grassroots leaders and community enterprises.
-    </p>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Capacity Building</h3>
-            <p>
-                Practical training for community leaders and members
-                based on identified needs.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Mentoring & Advisory</h3>
-            <p>
-                Guidance to improve organization, planning,
-                leadership and group performance.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Leadership & Governance</h3>
-            <p>
-                Support for accountable leadership, governance systems,
-                responsibilities and decision-making.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Financial Management</h3>
-            <p>
-                Support for financial discipline, records,
-                accountability and responsible resource management.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Enterprise Development</h3>
-            <p>
-                Guidance for strengthening existing community
-                businesses, projects and enterprises.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Market Linkages</h3>
-            <p>
-                Connecting organized community enterprises with
-                potential markets and business opportunities.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Networking</h3>
-            <p>
-                Creating relationships between community groups,
-                institutions, private-sector actors and partners.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Proposal & Project Support</h3>
-            <p>
-                Support with project planning, documentation,
-                proposals and development ideas.
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- GRASCO GDS -->
-<section id="gds">
-
-    <h2>GRASCO Self-Help Group Development Standard</h2>
-
-    <p class="section-intro">
-        The GRASCO-GDS provides a structured framework for strengthening
-        community self-help groups and their ability to operate effectively,
-        transparently and sustainably.
-    </p>
-
-    <div class="pillars">
-
-        <div class="pillar">
-            <strong>1. Identity</strong>
-            <p>Clear group identity, purpose and direction.</p>
-        </div>
-
-        <div class="pillar">
-            <strong>2. Leadership</strong>
-            <p>Responsible and effective leadership.</p>
-        </div>
-
-        <div class="pillar">
-            <strong>3. Membership</strong>
-            <p>Organized and active membership.</p>
-        </div>
-
-        <div class="pillar">
-            <strong>4. Governance</strong>
-            <p>Clear rules, responsibilities and accountability.</p>
-        </div>
-
-        <div class="pillar">
-            <strong>5. Financial Management</strong>
-            <p>Proper records and responsible financial practices.</p>
-        </div>
-
-        <div class="pillar">
-            <strong>6. Records</strong>
-            <p>Reliable organizational and operational records.</p>
-        </div>
-
-        <div class="pillar">
-            <strong>7. Planning</strong>
-            <p>Practical planning and measurable activities.</p>
-        </div>
-
-        <div class="pillar">
-            <strong>8. Enterprise</strong>
-            <p>Strengthening viable community economic activities.</p>
-        </div>
-
-        <div class="pillar">
-            <strong>9. Market Access</strong>
-            <p>Improving connections to markets and opportunities.</p>
-        </div>
-
-        <div class="pillar">
-            <strong>10. Skills</strong>
-            <p>Continuous development of practical skills.</p>
-        </div>
-
-        <div class="pillar">
-            <strong>11. Networking</strong>
-            <p>Building productive institutional relationships.</p>
-        </div>
-
-        <div class="pillar">
-            <strong>12. Sustainability</strong>
-            <p>Building systems that can continue over time.</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- NETWORK -->
-<section id="network" class="network">
-
-    <div class="network-inner">
-
-        <h2>Our Community Network</h2>
-
-        <p>
-            GRASCO works through a structured grassroots network designed
-            to connect community leadership, local coordination and
-            organized self-help groups.
-        </p>
-
-        <div class="about-grid">
-
-            <div class="about-card">
-                <h3>County</h3>
-                <p>
-                    County-level leadership and coordination.
-                </p>
-            </div>
-
-            <div class="about-card">
-                <h3>Sub-County</h3>
-                <p>
-                    Chapter-level coordination and implementation.
-                </p>
-            </div>
-
-            <div class="about-card">
-                <h3>Ward</h3>
-                <p>
-                    Cluster-level grassroots coordination.
-                </p>
-            </div>
-
-            <div class="about-card">
-                <h3>Village / Hamlet</h3>
-                <p>
-                    Direct community engagement and grassroots
-                    coordination.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- STRUCTURE -->
-<section id="structure" class="structure">
-
-    <h2>GRASCO Organizational Structure</h2>
-
-    <p class="section-intro">
-        GRASCO connects its leadership and grassroots coordination
-        structures with the administrative levels through which
-        communities are organized.
-    </p>
-
-    <div class="structure-box">
-        <h3>County Level</h3>
-        <p>
-            Executive leadership provides overall organizational
-            direction, coordination and accountability.
-        </p>
-    </div>
-
-    <div class="structure-box">
-        <h3>Sub-County Level</h3>
-        <p>
-            Chapter management coordinates GRASCO activities and
-            implementation within the Sub-County.
-        </p>
-    </div>
-
-    <div class="structure-box">
-        <h3>Ward Level</h3>
-        <p>
-            Cluster coordination supports grassroots engagement,
-            communication and implementation at Ward level.
-        </p>
-    </div>
-
-    <div class="structure-box">
-        <h3>Village / Hamlet Level</h3>
-        <p>
-            Grassroots representatives maintain direct links with
-            communities and participating groups.
-        </p>
-    </div>
-
-</section>
-
-
-<!-- VERIFICATION -->
-<section id="verification" class="verify">
-
-    <h2>GRASCO Member Verification</h2>
-
-    <p>
-        Confirm a GRASCO member's registration details through the
-        official GRASCO verification service.
-    </p>
-
-    <a class="btn"
-       href="https://script.google.com/macros/s/AKfycbwABSmvEFfdLNe6aHqQuCwugj68gKdC5lHwYt75UeLLE5l43VkFjSscb6M_Wi_0xpTOaw/exec">
-        Open Member Verification
-    </a>
-
-</section>
-
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-
-    <h2>Contact GRASCO</h2>
-
-    <p class="section-intro">
-        For general enquiries, community engagement and GRASCO services,
-        contact the organization through the details below.
-    </p>
-
-    <div class="contact-grid">
-
-        <div class="contact-card">
-            <h3>Email</h3>
-            <p>
-                <a href="mailto:grasco.org@gmail.com">
-                    grasco.org@gmail.com
-                </a>
-            </p>
-        </div>
-
-        <div class="contact-card">
-            <h3>Mobile</h3>
-            <p>
-                <a href="tel:+254722636868">
-                    0722 636 868
-                </a>
-            </p>
-        </div>
-
-        <div class="contact-card">
-            <h3>Telephone</h3>
-            <p>
-                <a href="tel:041779998">
-                    041 779 998
-                </a>
-            </p>
-        </div>
-
-        <div class="contact-card">
-            <h3>Location</h3>
-            <p>
-                Kilifi County, Kenya
-            </p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FOOTER -->
-<footer>
-
-    <strong>GRASCO</strong>
-
-    <p>
-        Grassroots Resource and Skills for Community Opportunities
-    </p>
-
-    <p>
-        Stronger Together, Better Communities.
-    </p>
-
-    <a class="back-top" href="#home">
-        ↑ Back to Top
-    </a>
-
-</footer>
-
-
-<!-- JAVASCRIPT -->
-<script>
-
-function toggleMenu(){
-
-    const nav = document.getElementById("mainNav");
-    const button = document.querySelector(".menu-button");
-
-    nav.classList.toggle("active");
-
-    const isOpen = nav.classList.contains("active");
-
-    button.setAttribute("aria-expanded", isOpen);
-
-}
-
-
-function closeMenu(){
-
-    const nav = document.getElementById("mainNav");
-
-    const button = document.querySelector(".menu-button");
-
-    nav.classList.remove("active");
-
-    button.setAttribute("aria-expanded", "false");
-
-}
-
-
-/* Close the mobile menu if the user taps outside it */
-
-document.addEventListener("click", function(event){
-
-    const nav = document.getElementById("mainNav");
-
-    const button = document.querySelector(".menu-button");
-
-    if(
-        nav.classList.contains("active") &&
-        !nav.contains(event.target) &&
-        !button.contains(event.target)
-    ){
-
-        closeMenu();
-
-    }
-
-});
-
-</script>
-
-</body>
-</html>
+  padding:34px 6%;
+  text-align:center;
