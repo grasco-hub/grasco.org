@@ -496,4 +496,253 @@ footer strong{font-size:21px}
 }
 .problem-item input{margin-top:4px;transform:scale(1.2)}
 .training-threshold{
+  max-width:850px;margin:25px auto;
+  padding:20px;
+  text-align:center;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 5px 16px rgba(0,0,0,.08);
+}
+.training-open-btn,.training-submit-btn{
+  display:block;
+  margin:15px auto 0;
+  border:0;
+  border-radius:8px;
+  padding:13px 20px;
+  background:#08735f;
+  color:#fff;
+  font-weight:bold;
+  cursor:pointer;
+}
+.training-open-btn:hover,.training-submit-btn:hover{opacity:.9}
+.training-details{
+  display:none;
   max-width:850px;
+  margin:25px auto 0;
+  padding:25px;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 5px 18px rgba(0,0,0,.1);
+}
+.training-details.open{display:block}
+.training-details h3{color:#0b587c}
+.training-details h4{color:#08735f;margin-top:25px}
+.training-details label:not(.application-consent){
+  display:block;
+  margin:13px 0 5px;
+  font-weight:bold;
+}
+.training-details input[type="text"],
+.training-details input[type="tel"],
+.training-details input[type="number"],
+.training-details textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #b9c8cf;
+  border-radius:7px;
+  font-size:16px;
+  box-sizing:border-box;
+}
+.application-consent{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  margin:18px 0;
+  font-size:14px;
+}
+.application-consent input{margin-top:3px}
+.training-message{
+  margin-top:12px;
+  padding:12px 14px;
+  border-radius:8px;
+  background:#fff3cd;
+  border:1px solid #f0c36d;
+  color:#8a5200;
+  display:none;
+}
+.training-message.show{display:block}
+.service-request-list{display:grid;gap:9px;margin:8px 0 14px}
+.service-request-list label{display:flex !important;align-items:flex-start;gap:10px;margin:0 !important;padding:11px 12px;background:#f7fafb;border:1px solid #d8e3e6;border-radius:7px;font-weight:normal !important}
+.service-request-list input{margin-top:3px}
+
+
+.verification-webapp-wrap{
+  width:100%;
+  max-width:980px;
+  margin:28px auto 16px;
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 8px 24px rgba(0,0,0,.16);
+}
+.verification-webapp{
+  display:block;
+  width:100%;
+  height:820px;
+  border:0;
+  background:#fff;
+}
+.verification-external{
+  margin:14px 0 8px;
+  font-size:14px;
+}
+.verification-open-btn{
+  margin:6px 0 12px;
+}
+@media(max-width:600px){
+  .verification-webapp{height:900px;}
+}
+
+</style>
+
+<style id="grasco-header-clean-style">
+.grasco-header-clean{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:12px !important;
+  padding:16px 12px 14px !important;
+}
+.grasco-header-clean .logo-link{
+  display:block !important;
+  width:100% !important;
+  text-align:center !important;
+}
+.grasco-header-clean .logo-box{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  margin:0 auto !important;
+}
+.grasco-header-clean .logo-box img{
+  display:block !important;
+  margin:0 auto !important;
+}
+.grasco-top-actions{
+  display:flex !important;
+  flex-direction:row !important;
+  justify-content:center !important;
+  align-items:center !important;
+  gap:10px !important;
+  width:100% !important;
+  flex-wrap:nowrap !important;
+}
+.grasco-top-actions > *{
+  flex:1 1 0 !important;
+  min-width:0 !important;
+  max-width:220px !important;
+  margin:0 !important;
+}
+.grasco-top-actions .nav-picker{
+  position:relative !important;
+  width:auto !important;
+}
+.grasco-top-actions .nav-picker-btn,
+.grasco-top-actions .btn{
+  width:100% !important;
+  margin:0 !important;
+  white-space:nowrap !important;
+}
+@media (max-width:520px){
+  .grasco-header-clean{padding-left:8px !important;padding-right:8px !important;}
+  .grasco-top-actions{gap:6px !important;}
+  .grasco-top-actions .nav-picker-btn,
+  .grasco-top-actions .btn{
+    padding:11px 7px !important;
+    font-size:13px !important;
+  }
+}
+</style>
+
+<style id="grasco-header-final-fix">
+.grasco-header-clean{
+  background:#fff !important;
+  padding:12px 14px 14px !important;
+  gap:10px !important;
+  border-bottom:1px solid #dfe5e8 !important;
+}
+.grasco-header-clean .logo-box{
+  width:180px !important;
+  height:92px !important;
+}
+.grasco-top-actions{
+  width:100% !important;
+  max-width:760px !important;
+  display:grid !important;
+  grid-template-columns:repeat(3,1fr) !important;
+  gap:8px !important;
+}
+.grasco-top-actions > *{
+  width:100% !important;
+  max-width:none !important;
+  flex:none !important;
+}
+.grasco-top-actions .nav-picker-btn,
+.grasco-top-actions .btn{
+  width:100% !important;
+  min-width:0 !important;
+  min-height:48px !important;
+  margin:0 !important;
+  padding:12px 8px !important;
+  border-radius:9px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  text-align:center !important;
+  font-size:14px !important;
+  line-height:1.15 !important;
+  white-space:normal !important;
+}
+.grasco-top-actions .nav-picker-btn{
+  justify-content:space-between !important;
+  padding-left:12px !important;
+  padding-right:12px !important;
+}
+.grasco-top-actions .nav-picker{position:relative !important;}
+@media(max-width:520px){
+  .grasco-header-clean{padding:9px 9px 12px !important;gap:9px !important;}
+  .grasco-header-clean .logo-box{width:150px !important;height:78px !important;}
+  .grasco-top-actions{gap:6px !important;}
+  .grasco-top-actions .nav-picker-btn,
+  .grasco-top-actions .btn{min-height:48px !important;padding:10px 5px !important;font-size:12px !important;}
+  .grasco-top-actions .nav-picker-btn{padding-left:8px !important;padding-right:8px !important;}
+}
+</style>
+</head>
+
+<body id="home">
+
+<header class="grasco-header-clean">
+  <a class="logo-link" href="#home" aria-label="GRASCO Home">
+    <div class="logo-box">
+      <img src="grasco-logo.png" alt="GRASCO logo">
+    </div>
+  </a>
+
+  <div class="grasco-top-actions">
+    <div class="nav-picker">
+      <button type="button" class="nav-picker-btn" onclick="toggleExplore()" aria-expanded="false" aria-controls="exploreMenu">
+        <span>Explore GRASCO</span><span class="arrow">▼</span>
+      </button>
+      <div id="exploreMenu" class="explore-menu">
+        <a href="#home" onclick="closeExplore()">Home</a>
+        <a href="#about" onclick="closeExplore()">About Us</a>
+        <a href="#beliefs" onclick="closeExplore()">Our Beliefs</a>
+        <a href="#commitment" onclick="closeExplore()">Our Commitment</a>
+        <a href="#challenge" onclick="closeExplore()">The Challenge</a>
+        <a href="#solution" onclick="closeExplore()">The GRASCO Solution</a>
+        <a href="#pledge" onclick="closeExplore()">Our Pledge</a>
+        <a href="#creed" onclick="closeExplore()">GRASCO Creed</a>
+        <a href="#services" onclick="closeExplore()">Services</a>
+        <a href="#gds" onclick="closeExplore()">GRASCO-GDS</a>
+        <a href="#network" onclick="closeExplore()">Our Network</a>
+        <a href="#structure" onclick="closeExplore()">Structure</a>
+        <a href="#team" onclick="closeExplore()">GRASCO Team</a>
+        <a href="#executive" onclick="closeExplore()">Executive Committee</a>
+        <a href="#committees" onclick="closeExplore()">Standing Committees</a>
+        <a href="#membership" onclick="closeExplore()">Membership</a>
+        <a href="#gallery" onclick="closeExplore()">Gallery</a>
+        <a href="#activity" onclick="closeExplore()">Activity Hub</a>
+        <a href="#market" onclick="closeExplore()">Self-Help Groups Market</a>
+        <a href="#testimony" onclick="closeExplore()">Testimony</a>
