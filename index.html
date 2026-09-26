@@ -1491,4 +1491,241 @@ footer strong{font-size:21px}
 
     <label class="problem-item">
       <input type="checkbox" class="problem-check">
-      <span><strong>5.</strong> Fighting for Positions</span>
+      <span><strong>5.</strong> Fighting for Positions</span></label>
+  </div>
+
+  <div class="training-threshold">
+    <strong id="trainingSelectionCount">Select at least THREE problems to request GRASCO support.</strong>
+    <div id="trainingRequirementMessage" class="training-message" aria-live="polite"></div>
+  </div>
+
+  <div id="trainingDetails" class="training-details">
+    <h3>GRASCO Community Group Support</h3>
+    <p>
+      GRASCO does not offer training alone. We first listen to the group’s
+      challenges and identify the most appropriate practical support. Depending
+      on the situation, GRASCO may provide guidance and counselling, advisory
+      services, mediation and conflict resolution, marketing linkages, group
+      registration guidance, leadership and governance support, enterprise
+      development, training and capacity building, partnerships, and other
+      relevant services.
+    </p>
+
+    <h4>What happens after you request support?</h4>
+    <ol>
+      <li>GRASCO reviews your group's identified challenges.</li>
+      <li>A preliminary discussion is conducted to understand the group's training needs.</li>
+      <li>The appropriate support or combination of services is proposed to the group.</li>
+      <li>The group confirms the support required and the applicable service arrangements.</li>
+    </ol>
+
+    <h4>GRASCO Service Request Form</h4>
+    <form id="trainingForm" onsubmit="submitTrainingApplication(event)">
+      <label for="groupName">Group Name *</label>
+      <input id="groupName" name="groupName" required type="text" placeholder="Enter group name">
+
+      <label for="location">Location / Village *</label>
+      <input id="location" name="location" required type="text" placeholder="Enter village/location">
+
+      <label for="contactPerson">Contact Person *</label>
+      <input id="contactPerson" name="contactPerson" required type="text" placeholder="Enter contact person's name">
+
+      <label for="phone">Phone Number *</label>
+      <input id="phone" name="phone" required type="tel" placeholder="Enter phone number">
+
+      <label for="members">Number of Group Members *</label>
+      <input id="members" name="members" required type="number" min="1" placeholder="Enter number of members">
+
+      <label>Service(s) Requested *</label>
+      <div class="service-request-list">
+        <label><input type="checkbox" name="services" value="Guidance & Counselling"> Guidance & Counselling</label>
+        <label><input type="checkbox" name="services" value="Advisory Services"> Advisory Services</label>
+        <label><input type="checkbox" name="services" value="Mediation & Conflict Resolution"> Mediation & Conflict Resolution</label>
+        <label><input type="checkbox" name="services" value="Marketing Linkages"> Marketing Linkages</label>
+        <label><input type="checkbox" name="services" value="Group Registration Guidance"> Group Registration Guidance</label>
+        <label><input type="checkbox" name="services" value="Leadership & Governance Support"> Leadership & Governance Support</label>
+        <label><input type="checkbox" name="services" value="Training & Capacity Building"> Training & Capacity Building</label>
+        <label><input type="checkbox" name="services" value="Enterprise Development"> Enterprise Development</label>
+        <label><input type="checkbox" name="services" value="Partnerships & Linkages"> Partnerships & Linkages</label>
+        <label><input type="checkbox" name="services" value="Other Support"> Other Support</label>
+      </div>
+
+      <label for="serviceNeed">Describe the problem, need or support requested *</label>
+      <textarea id="serviceNeed" name="serviceNeed" required rows="5"
+        placeholder="Tell GRASCO what is happening in your group and how you would like GRASCO to assist"></textarea>
+
+      <label class="application-consent">
+        <input id="acknowledge" name="acknowledge" required type="checkbox">
+        <span>I confirm that the information provided is correct and that the group is requesting GRASCO support or services.</span>
+      </label>
+
+      <button type="submit" class="training-submit-btn">SUBMIT SERVICE REQUEST</button>
+      <div id="trainingFormMessage" class="training-message" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+<section id="verification" class="verify">
+  <h2>GRASCO Member Verification</h2>
+  <p>
+    Use the secure GRASCO verification system below to verify membership,
+    generate QR codes and complete QR Dual Verification.
+  </p>
+
+  <div class="verification-webapp-wrap">
+    <iframe
+      class="verification-webapp"
+      src="https://script.google.com/macros/s/AKfycbwABSmvEFfdLNe6aHqQuCwugj68gKdC5lHwYt75UeLLE5l43VkFjSscb6M_Wi_0xpTOaw/exec"
+      title="GRASCO Member Verification System"
+      loading="lazy"
+      allow="camera; clipboard-read; clipboard-write"
+      referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+  </div>
+
+  <p class="verification-external">
+    If the verification system does not load inside the page, use the button below.
+  </p>
+  <a class="btn orange verification-open-btn" href="https://script.google.com/macros/s/AKfycbwABSmvEFfdLNe6aHqQuCwugj68gKdC5lHwYt75UeLLE5l43VkFjSscb6M_Wi_0xpTOaw/exec" target="_blank" rel="noopener noreferrer">
+    OPEN GRASCO VERIFICATION SYSTEM
+  </a>
+
+  <p class="verification-note">
+    The GRASCO website connects directly to the existing verification system.
+    Existing Verification IDs and QR codes using <strong>?vid=</strong> remain compatible.
+  </p>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact GRASCO</h2>
+  <p class="section-intro">
+    For general enquiries, community partnerships, training, group support and
+    programme information, contact GRASCO through the details below.
+  </p>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h3>Email</h3>
+      <p><a href="mailto:grasco.org@gmail.com">grasco.org@gmail.com</a></p>
+    </div>
+
+    <div class="contact-card">
+      <h3>Mobile</h3>
+      <p><a href="tel:+254722636868">0722 636 868</a></p>
+    </div>
+
+    <div class="contact-card">
+      <h3>Telephone</h3>
+      <p><a href="tel:041779998">041 779 998</a></p>
+    </div>
+
+    <div class="contact-card">
+      <h3>Location</h3>
+      <p>Kilifi County, Kenya</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>GRASCO</strong><br>
+  Grassroots Resource and Skills for Community Opportunities<br>
+  Stronger Together — Better Communities
+  <br>
+  <a class="back-top" href="#home">↑ Back to top</a>
+</footer>
+
+<script>
+function toggleExplore(){
+  const menu=document.getElementById("exploreMenu");
+  const button=document.querySelector(".nav-picker-btn");
+  const open=!menu.classList.contains("open");
+  menu.classList.toggle("open",open);
+  button.setAttribute("aria-expanded",open ? "true" : "false");
+}
+
+function closeExplore(){
+  const menu=document.getElementById("exploreMenu");
+  const button=document.querySelector(".nav-picker-btn");
+  menu.classList.remove("open");
+  button.setAttribute("aria-expanded","false");
+}
+
+function closeMenu(){
+  closeExplore();
+}
+
+document.addEventListener("click",function(event){
+  const menu=document.getElementById("exploreMenu");
+  const button=document.querySelector(".nav-picker-btn");
+
+  if(
+    menu.classList.contains("open") &&
+    !menu.contains(event.target) &&
+    !button.contains(event.target)
+  ){
+    closeExplore();
+  }
+});
+
+function toggleVerification(){
+  const panel=document.getElementById("verificationSteps");
+  const button=document.querySelector(".verification-toggle");
+  const open=!panel.classList.contains("open");
+  panel.classList.toggle("open",open);
+  button.setAttribute("aria-expanded",open ? "true" : "false");
+}
+
+
+function showVerification(id){
+  document.querySelectorAll(".verification-option-content").forEach(function(el){
+    if(el.id !== id) el.classList.remove("open");
+  });
+  const panel=document.getElementById(id);
+  if(panel) panel.classList.toggle("open");
+}
+
+
+
+
+function updateTrainingAccess(){
+  const checked=document.querySelectorAll(".problem-check:checked").length;
+  const message=document.getElementById("trainingRequirementMessage");
+  const count=document.getElementById("trainingSelectionCount");
+  const details=document.getElementById("trainingDetails");
+
+  if(checked < 3){
+    count.textContent = "Select at least THREE problems to continue. (" + checked + " selected)";
+    message.classList.remove("show");
+    details.classList.remove("open");
+    return;
+  }
+
+  count.textContent = checked + " challenges selected. Your group can now access GRASCO support information.";
+  message.innerHTML="<strong>GRASCO support is now available.</strong> Your group has identified challenges that may require more than one solution. GRASCO can provide guidance and counselling, advisory support, mediation and conflict resolution, marketing linkages, group registration guidance, leadership and governance support, enterprise development, training and capacity building, partnerships, and other practical services based on your group’s needs.";
+  message.classList.add("show");
+  details.classList.add("open");
+  details.scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+document.querySelectorAll(".problem-check").forEach(function(box){
+  box.addEventListener("change", updateTrainingAccess);
+});
+
+function submitTrainingApplication(event){
+  event.preventDefault();
+  const message=document.getElementById("trainingFormMessage");
+  message.innerHTML="<strong>Application prepared.</strong> The form interface is ready to be connected to GRASCO's submission system.";
+  message.classList.add("show");
+}
+
+</script>
+
+
+
+
+</body>
+</html>
